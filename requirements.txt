@@ -1,6 +1,5 @@
 fastapi
 uvicorn
-streamlit
 requests
 sentence-transformers==2.2.2
 faiss-cpu
@@ -10,3 +9,4 @@ python-dotenv
 sqlalchemy
 pydantic
 pypdf
+
