@@ -82,10 +82,11 @@ def response(query,context):
     return completion.choices[0].message.content
 
 def pipeline(query):
-    chunks = load_folders(r"D:\Project_Travel\ai_travel_planner\data")
+    chunks = load_folders("data")
     texts = [c["text"] for c in chunks]
     embed = embed_model.encode(texts)
     index = create_index(embed)
     search_data = search(chunks, query, index)
     output = response(query, search_data)
+
     return output
