@@ -1,0 +1,57 @@
+Autonomous AI Travel Planner
+
+Problem:
+Travel planning is fragmented.
+
+Build:
+AI travel planner that builds itineraries from user intent.
+
+Tech Use:
+RAG over travel guides & policies
+LLM itinerary generation
+Streamlit planner UI
+
+Structure:
+
+ai_travel_planner/
+│
+├── backend/
+│   │
+│   ├── database/
+│   │   ├── db.py             → DB / vector connection
+│   │   └── dep.py            → Dependency injection
+│   │
+│   ├── models/
+│   │   ├── pydantic.py       → Request/response schemas
+│   │   └── table.py          → SQLAlchemy tables (optional)
+│   │
+│   ├── services/
+│   │   └── rag.py            → FAISS + RAG Logic
+│   │
+│   ├── routes/
+│   │   └── routes.py         → API endpoints
+│   │
+│   └── main.py               → FastAPI app entry
+│
+├── frontend/
+│   └── app.py                → Streamlit UI
+│
+├── data/
+    ├── tourism_india.txt    
+
+
+
+File:
+
+auth/auth.py           → FastAPI auth logic (login/register)
+database/db.py         → DB connection (SQLite / vector DB)
+database/dep.py        → Dependency injection
+models/pydantic.py     → Pydantic schemas
+models/table.py        → SQLAlchemy tables (optional)
+services/service.py    → LLM + RAG business logic
+rag/rag.py             → FAISS
+routes/routes.py       → API endpoints
+main.py                → FastAPI app start
+frontend/app.py        → Streamlit UI
+data/*.txt/json        → Travel knowledge base
+requirements.txt       → Project dependencies
