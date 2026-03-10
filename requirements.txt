@@ -1,7 +1,6 @@
 fastapi
 uvicorn
 requests
-sentence-transformers==2.2.2
 faiss-cpu
 numpy
 groq
@@ -9,4 +8,3 @@ python-dotenv
 sqlalchemy
 pydantic
 pypdf
-
